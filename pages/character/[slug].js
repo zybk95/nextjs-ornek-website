@@ -2,13 +2,18 @@ import Layout from '../../components/layout'
 import Head from 'next/head'
 import unfetch from 'isomorphic-unfetch'
 import slug from 'slug'
+import Link from "next/link";
 
 function CharacterDetail({ character }) {
   return (
     <Layout>
       <Head>
-        <title>Ana sayfa</title>
+        <title>{character.name}</title>
       </Head>
+
+      <Link  href="/">
+        <a>←</a>
+      </Link>
 
       <h1>{character.name}</h1>
 
